@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on My New Hugo Site</title>
-    <link>https://github.com/stq957023588/book/categories/</link>
+    <link>https://stq957023588.github.io/book/categories/</link>
     <description>Recent content in Categories on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Mar 2022 10:33:28 +0000</lastBuildDate>
-    <atom:link href="https://github.com/stq957023588/book/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://stq957023588.github.io/book/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Concurrency</title>
-      <link>https://github.com/stq957023588/book/categories/concurrency/</link>
+      <link>https://stq957023588.github.io/book/categories/concurrency/</link>
       <pubDate>Fri, 25 Mar 2022 10:33:28 +0000</pubDate>
-      <guid>https://github.com/stq957023588/book/categories/concurrency/</guid>
+      <guid>https://stq957023588.github.io/book/categories/concurrency/</guid>
       <description></description>
     </item>
   </channel>
