@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统s on My New Hugo Site</title>
+    <link>http://localhost:1313/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 操作系统s on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/</guid>
+      <description>&lt;h1 id=&#34;windows安装ubuntu子系统&#34;&gt;Windows安装Ubuntu子系统&lt;/h1&gt;&#xA;&lt;h2 id=&#34;安装包安装&#34;&gt;安装包安装&lt;/h2&gt;&#xA;&lt;p&gt;参考链接&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Echo__Yi/article/details/120987822&#34;&gt;Ubuntu设置、非C盘安装及重装_ubuntu必须安装在c盘吗_EcrayyarcE的博客-CSDN博客&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;远程ssh免密访问方法&#34;&gt;远程SSH免密访问方法&lt;/h1&gt;&#xA;&lt;p&gt;本机通过ssh-keygen生成密钥&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t rsa&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;默认会在C:\Users\用户名/.ssh/下生成id_rsa，id_rsa.pub两个文件&lt;/p&gt;&#xA;&lt;h1 id=&#34;无法使用kill杀死的进程&#34;&gt;无法使用kill杀死的进程&lt;/h1&gt;&#xA;&lt;h2 id=&#34;产生原因&#34;&gt;产生原因&lt;/h2&gt;&#xA;&lt;p&gt;无法杀死线程,可能是由于kill的是子线程&lt;/p&gt;&#xA;&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;&#xA;&lt;p&gt;使用 ps aux 查看进程状态,找到STAT一栏,如果为Z那么就是僵尸进程&lt;/p&gt;&#xA;&lt;p&gt;通过 ps -ef | grep 僵尸进程ID  找到父进程ID,先kill掉父进程&lt;/p&gt;&#xA;&lt;h1 id=&#34;cpu占用过高排查&#34;&gt;CPU占用过高排查&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;使用 top -c 命令查询CPU占用过高进程&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND&#xD;&#xA;    1 root      20   0 3153388  29572  15996 S 399.2   1.5   7:40.41 java -jar application.jar&#xD;&#xA;   27 root      20   0    2392    756    688 S   0.0   0.0   0:00.01 /bin/sh&#xD;&#xA;   35 root      20   0    9748   3428   2992 R   0.0   0.2   0:00.00 top -c&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;根据第一步查询到的CPU占用过高的进程ID, 使用 top -Hp 1 查询进程下各个线程CPU占用情况&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
