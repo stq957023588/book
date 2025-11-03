@@ -1,0 +1,77 @@
+---
+weight: 999
+title: "Miniconda"
+description: ""
+icon: "article"
+date: "2025-11-03T10:59:56+08:00"
+lastmod: "2025-11-03T10:59:56+08:00"
+draft: false
+toc: true
+---
+用于python包管理（包括python本身）
+
+# 安装配置
+
+1. [官网下载](https://docs.conda.io/en/latest/miniconda.html#)
+
+2. 打开命令终端：Anaconda Prompt
+
+3. 配置
+
+   ```shell
+   conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+   conda config --set show_channel_urls yes
+   ```
+
+4. 创建环境
+
+   ```shell
+   conda create -n [环境名称] python=3.6
+   ```
+
+5. 激活环境
+
+   ```shell
+   conda activate [环境名称]
+   ```
+
+6. 退出环境
+
+   ```shell
+   conda deactivate
+   ```
+
+   
+
+# 命令
+
+根据requirements.txt创建环境
+
+```shell
+conda create --name <environment_name> --file requirements.txt
+```
+
+下载安装包
+
+```shell
+conda install <包名>[=version]
+```
+
+通过requirements.txt安装包
+
+```shell
+conda install --yes --file requirements.txt
+```
+
+查看当前环境已安装的包
+
+```shell
+conda list
+```
+
+查看已有python环境
+
+```shell
+conda info --env
+```
+
