@@ -1,7 +1,7 @@
 ---
 weight: 999
 title: "Git"
-description: ""
+description: "Git的安装以及一些常用的操作"
 icon: "article"
 date: "2025-11-03T10:59:56+08:00"
 lastmod: "2025-11-03T10:59:56+08:00"
