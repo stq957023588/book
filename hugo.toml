@@ -20,9 +20,3 @@ unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
 [markup.goldmark.parser]
 [markup.goldmark.parser.attribute]
 block = true
-
-[[menu.primary]]
-name  = "Docs"
-url = "/docs/"
-identifier = "docs"
-weight = 10
