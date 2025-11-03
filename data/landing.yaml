@@ -1,0 +1,16 @@
+myCoolHero: # section title
+  enable: true
+  weight: 10 # position the 'myCoolHero' section at the top of the landing page
+  template: hero # use the 'hero' template for this section
+
+# Feature Grid
+coolAppFeatures:
+  enable: true
+  weight: 20
+  template: feature grid
+
+# Image Compare
+appImageCompare:
+  enable: true
+  weight: 30
+  template: image compare
