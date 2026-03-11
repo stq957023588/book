@@ -203,10 +203,58 @@ https://www.cnblogs.com/javaguide/p/springboot-auto-config.html
 
 # SpringBean的生命周期
 
-1. 实例化
+![image-20260126211334118](https://gitee.com/sixgod006/pic-go/raw/master/wechat/image-20260126211334118.png)
+
+1. 创建对象
 2. 属性赋值
 3. 初始化
 4. 销毁
+
+spring bean首先会通过Java反射进行创建，然后通过依赖注入的方式给Bean的属性进行赋值，赋值完毕后对Bean进行初始化（@PostConstruct注释的方法、InitializingBean.afterPropertiesSet()、@Bean中指定的initMethod。按照先后顺序执行）,最后对Bean进行销毁（@PreDestory注释的方法、DisposableBean.destory()、@Bean中指定的destoryMethod）
+
+```java
+
+@Configuration
+public class LifeCycleConfiguration {
+
+    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
+    Test test() {
+        return new Test();
+    }
+
+}
+
+
+public class Test implements InitializingBean, DisposableBean {
+    @PostConstruct
+    public void postConstructInit() {
+        System.out.println("初始化最先执行");
+    }
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("初始化其次执行");
+    }
+    public void initMethod() {
+        System.out.println("初始化最后执行");
+    }
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("销毁最先执行");
+    }
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("销毁其次执行");
+    }
+
+    public void destroyMethod() {
+        System.out.println("销毁最后执行");
+    }
+}
+```
+
+
+
+> [一个例子讲明白spring bean的生命周期_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1n9k4BJEoP/?spm_id_from=333.1007.tianma.19-4-74.click&vd_source=f00644758915884537f04a3c0442a20b)
 
 # Spring的三级缓存
 
