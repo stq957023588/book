@@ -18,7 +18,7 @@ toc: true
 
 # 远程SSH免密访问方法
 
-本机通过ssh-keygen生成密钥
+1. 本机通过ssh-keygen生成密钥
 
 ```shell
 ssh-keygen -t rsa
@@ -26,7 +26,17 @@ ssh-keygen -t rsa
 
 默认会在C:\Users\用户名/.ssh/下生成id_rsa，id_rsa.pub两个文件
 
+2. 将id_rsa.pub 复制到目标机器上
 
+```shell
+ssh id_rsa.pub root@192.168.1.3:~/.ssh
+```
+
+3. 在目标机器上将刚赋值的公钥放到authorized_keys文件中
+
+```shell
+cat id_rsa.pub >> authorized_keys
+```
 
 # 无法使用kill杀死的进程
 

@@ -679,6 +679,8 @@ public class MyMessageListener implements MessageListener {
 
 ![在这里插入图片描述](c2625b72ff49682aba4f6eae302a631e.png)
 
+**RabbitMQ实现方案**
+
 > [RabbitMQ如何保证消息的顺序性【重点】-CSDN博客](https://blog.csdn.net/weixin_42039228/article/details/123526391)
 
 # shardingsphere-jdbc
